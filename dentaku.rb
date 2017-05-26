@@ -22,11 +22,18 @@ while true
 	end
 end
 
-puts "計算方法を選んでください"
-puts "[0]:足し算\n[1]:引き算\n[2]:掛け算\n[3]:割り算"
+puts "[0]:+\n[1]:-\n[2]:×\n[3]:÷"
 
-z = gets.to_i
+while true
+	puts "計算方法を選んでください"
+	z = gets.chomp
+	if z == "0"||z == "1"||z == "2"||z == "3" 
+		break
+	end
 
+end
+
+z = z.to_i
 x = x.to_i 
 y = y.to_i
 if key == 1
@@ -67,7 +74,7 @@ else
 		if y == 0
 			puts "解なし"
 		else
-			result = x / y
+			result = x / y 
 			puts "答え:#{result}"
 		end
 	end
@@ -87,6 +94,7 @@ elsif z == 2
 end
 
 end
+
 
 
 
